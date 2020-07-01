@@ -1,8 +1,12 @@
 var express = require('express');
+const { response } = require('express');
 app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!\n');
+  response = 'This os version 2 of the app.'+'\n';
+
+  //send the response to the client
+  res.send(response);
 });
 
 app.get('/mars', function(req, res) {
